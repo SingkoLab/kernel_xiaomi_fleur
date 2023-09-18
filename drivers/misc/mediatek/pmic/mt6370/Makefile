@@ -1,4 +1,5 @@
 subdir-ccflags-y += -Wall -Werror
+subdir-ccflags-y += $(call cc-disable-warning, unused-but-set-variable)
 ifeq ($(CONFIG_MTK_GAUGE_VERSION),30)
 subdir-ccflags-y += -I$(srctree)/drivers/misc/mediatek/typec/tcpc/inc
 subdir-ccflags-y += -I$(srctree)/drivers/power/supply/mediatek/charger

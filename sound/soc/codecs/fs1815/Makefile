@@ -7,6 +7,7 @@
 
 # EXTRA_CFLAGS += -DDEBUG -DFSM_DEBUG
 EXTRA_CFLAGS += -Wall -Werror
+EXTRA_CFLAGS += $(call cc-disable-warning, unused-but-set-variable)
 MODFLAGS = -fno-pic
 CFLAGS_MODULE = $(MODFLAGS)
 AFLAGS_MODULE = $(MODFLAGS)
